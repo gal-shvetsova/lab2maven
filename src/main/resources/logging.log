@@ -1,0 +1,16 @@
+2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Define
+2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for DEFINE a 4
+2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Push
+2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for PUSH a
+2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Sqrt
+2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for SQRT
+2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Print
+2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for PRINT
+2019-01-31 17:31:06 INFO  Calculator:21 - Make DEFINE
+2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for DEFINE a 4
+2019-01-31 17:31:06 INFO  Calculator:21 - Make PUSH
+2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for PUSH a
+2019-01-31 17:31:06 INFO  Calculator:21 - Make SQRT
+2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for SQRT
+2019-01-31 17:31:06 INFO  Calculator:21 - Make PRINT
+2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for PRINT
