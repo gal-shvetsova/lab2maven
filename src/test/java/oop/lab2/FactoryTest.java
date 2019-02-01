@@ -1,21 +1,21 @@
 package oop.lab2;
 
+import oop.lab2.CalculatorExceptions.ArgumentsExceptions.NotCommandException;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import oop.lab2.Operations.Add;
 
 public class FactoryTest {
-    private static int count;
 
     @BeforeClass
     public static void init() {
-        count = OperationFactory.getInstance(null);
+        OperationFactory.init(null);
     }
 
     @Test
     public void testGetInstance() {
-        Assert.assertEquals(10, count);
+        Assert.assertEquals(10, OperationFactory.getMapOperationsSize());
     }
 
     @Test
@@ -30,18 +30,12 @@ public class FactoryTest {
 
     @Test
     public void testFindOperation() throws Exception {
-        Assert.assertTrue(Add.class == OperationFactory.findOperation("+").getClass());
+        Assert.assertSame(Add.class, OperationFactory.findOperation("+").getClass());
     }
 
-    @Test
-    public void testFindNoOperation() {
-        try {
+    @Test(expected = NotCommandException.class)
+    public void testFindNoOperation() throws Exception {
             OperationFactory.findOperation("=").getClass();
-        } catch (Exception ex) {
-            assert true;
-            return;
-        }
-        assert false;
     }
 
 

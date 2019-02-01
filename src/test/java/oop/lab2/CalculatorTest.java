@@ -7,29 +7,22 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     @Test
-    public void testCalculator(){
+    public void testCalculator() throws Exception {
         Calculator calculator = new Calculator();
 
-        try {
-            FileReader in = new FileReader("/home/galya/ru/nsu/ccfit/shvetsova/lab2maven/src/main/resources/test.txt");
-            Scanner scanner = new Scanner(in);
-            String expression;
+        FileReader in = new FileReader("/home/galya/ru/nsu/ccfit/shvetsova/lab2maven/src/main/resources/test.txt");
+        Scanner scanner = new Scanner(in);
+        String expression;
 
-            OperationFactory.getInstance("test.properties");
+        OperationFactory.init("test.properties");
 
 
-            while (scanner.hasNextLine()) {
-                expression = scanner.nextLine();
-                calculator.calculate(expression);
-            }
-
-        } catch (Exception ex) {
-            System.out.println(ex);
-            assert false;
-            return;
+        while (scanner.hasNextLine()) {
+            expression = scanner.nextLine();
+            calculator.calculate(expression);
         }
-        assert true;
-        return;
+
+
     }
 
 }

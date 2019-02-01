@@ -14,3 +14,52 @@
 2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for SQRT
 2019-01-31 17:31:06 INFO  Calculator:21 - Make PRINT
 2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for PRINT
+2019-02-01 09:15:38 INFO  Calculator:20 - Make DEFINE
+2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
+2019-02-01 09:15:38 INFO  Calculator:20 - Make PUSH
+2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for PUSH a
+2019-02-01 09:15:38 INFO  Calculator:20 - Make SQRT
+2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for SQRT
+2019-02-01 09:15:38 INFO  Calculator:20 - Make PRINT
+2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for PRINT
+2019-02-01 09:40:21 ERROR Calculator:22 - Catching exception in calculator.  is not a command in DEFINE a 4
+2019-02-01 09:41:20 INFO  Calculator:20 - Make DEFINE
+2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
+2019-02-01 09:41:20 INFO  Calculator:20 - Make PUSH
+2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for PUSH a
+2019-02-01 09:41:20 INFO  Calculator:20 - Make SQRT
+2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for SQRT
+2019-02-01 09:41:20 INFO  Calculator:20 - Make PRINT
+2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for PRINT
+2019-02-01 09:42:19 ERROR OperationFactory:43 - No file with operations
+2019-02-01 09:42:19 INFO  Calculator:20 - Make DEFINE
+2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
+2019-02-01 09:42:19 INFO  Calculator:20 - Make PUSH
+2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for PUSH a
+2019-02-01 09:42:19 INFO  Calculator:20 - Make SQRT
+2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for SQRT
+2019-02-01 09:42:19 INFO  Calculator:20 - Make PRINT
+2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for PRINT
+2019-02-01 09:42:41 INFO  Calculator:20 - Make DEFINE
+2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
+2019-02-01 09:42:41 INFO  Calculator:20 - Make PUSH
+2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for PUSH a
+2019-02-01 09:42:41 INFO  Calculator:20 - Make SQRT
+2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for SQRT
+2019-02-01 09:42:41 INFO  Calculator:20 - Make PRINT
+2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for PRINT
+2019-02-01 09:43:09 INFO  Calculator:20 - Make DEFINE
+2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
+2019-02-01 09:43:09 INFO  Calculator:20 - Make PUSH
+2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for PUSH a
+2019-02-01 09:43:09 INFO  Calculator:20 - Make SQRT
+2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for SQRT
+2019-02-01 09:43:09 INFO  Calculator:20 - Make PRINT
+2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for PRINT
+2019-02-01 09:43:23 INFO  Calculator:20 - Make DEFINE
+2019-02-01 09:43:23 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
+2019-02-01 09:43:23 INFO  Calculator:20 - Make PUSH
+2019-02-01 09:43:23 INFO  Calculator:26 - Successfully make calculation for PUSH a
+2019-02-01 09:43:23 INFO  Calculator:20 - Make SQRT
+2019-02-01 09:43:23 INFO  Calculator:26 - Successfully make calculation for SQRT
+2019-02-01 09:43:23 ERROR Calculator:22 - Catching exception in calculator.  is not a command in PRIfffNT

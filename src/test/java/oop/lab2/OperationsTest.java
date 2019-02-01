@@ -22,7 +22,7 @@ public class OperationsTest {
         context.pushArg(1);
         context.pushArg(1);
         add.operate(context);
-        Assert.assertTrue(2.0 == context.peekArg());
+        Assert.assertEquals(2, context.peekArg(), 0.1);
         context.popArg();
     }
 
@@ -32,7 +32,7 @@ public class OperationsTest {
         context.pushArg(4);
         context.pushArg(2);
         sub.operate(context);
-        Assert.assertTrue(2.0 == context.peekArg());
+        Assert.assertEquals(2, context.peekArg(), 0.1);
         context.popArg();
     }
 
@@ -42,7 +42,7 @@ public class OperationsTest {
         context.pushArg(4);
         context.pushArg(2);
         mul.operate(context);
-        Assert.assertTrue(8.0 == context.peekArg());
+        Assert.assertEquals(8.0, context.peekArg(), 0.1);
         context.popArg();
     }
 
@@ -59,7 +59,7 @@ public class OperationsTest {
         Push push = new Push();
         context.putToList("1");
         push.operate(context);
-        Assert.assertTrue(1 == context.peekArg());
+        Assert.assertEquals(1, context.peekArg(), 0.1);
         context.popArg();
     }
 
@@ -68,7 +68,7 @@ public class OperationsTest {
         Define define = new Define();
         context.putToList("a 4");
         define.operate(context);
-        Assert.assertTrue(4 == context.getVal("a"));
+        Assert.assertEquals(4, context.getVal("a"), 0.1);
     }
 
     @Test
@@ -81,23 +81,16 @@ public class OperationsTest {
         } catch (CalculatorException ex) {
             assert false;
         }
-        Assert.assertTrue(2 == context.peekArg());
+        Assert.assertEquals(2, context.peekArg(), 0.1);
         context.popArg();
     }
 
-    @Test
+    @Test(expected = DivisionByZeroException.class)
     public void testDivisionByZero() throws CalculatorException{
         Division division = new Division();
         context.pushArg(4);
         context.pushArg(0);
-        try {
-            division.operate(context);
-        } catch (DivisionByZeroException ex) {
-            assert true;
-            return;
-        }
-        assert false;
-        context.popArg();
+        division.operate(context);
     }
 
     @Test
@@ -109,22 +102,15 @@ public class OperationsTest {
         } catch (SqrtException ex) {
             assert false;
         }
-        Assert.assertTrue(2.0 == context.peekArg());
+        Assert.assertEquals(2.0, context.peekArg(), 0.1);
         context.popArg();
     }
 
-    @Test
+    @Test(expected = SqrtException.class)
     public void testSqrtException() throws CalculatorException {
         Sqrt sqrt = new Sqrt();
         context.pushArg(-4);
-        try {
-            sqrt.operate(context);
-        } catch (SqrtException ex) {
-            assert true;
-            return;
-        }
-        assert false;
-        context.popArg();
+        sqrt.operate(context);
     }
 
 }

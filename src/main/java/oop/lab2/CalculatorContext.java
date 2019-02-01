@@ -1,9 +1,9 @@
 package oop.lab2;
 
 import oop.lab2.CalculatorExceptions.ArgumentsExceptions.*;
-import oop.lab2.CalculatorExceptions.CalculatorException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -13,32 +13,33 @@ public class CalculatorContext {
     private ArrayList<String> line;
 
     public CalculatorContext() {
-        argStack = new Stack();
-        variables = new HashMap();
-        line = new ArrayList();
+        argStack = new Stack<>();
+        variables = new HashMap<>();
+        line = new ArrayList<>();
     }
-
 
     //work with stack
 
-    public double popArg() throws CalculatorException{
+    public double popArg() throws VoidStackException{
         try {
             if (argStack.empty())
                 throw new VoidStackException();
         } catch (VoidStackException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new VoidStackException();
         }
         return argStack.pop();
     }
 
-    public double peekArg() throws CalculatorException{
+    public double peekArg() throws VoidStackException{
         try {
             if (argStack.empty())
                 throw new VoidStackException();
         } catch (VoidStackException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new VoidStackException();
         }
         return argStack.peek();
     }
@@ -47,19 +48,20 @@ public class CalculatorContext {
         argStack.push(arg);
     }
 
-    public int sizeArg() {
+    int sizeArg() {
         return argStack.size();
     }
 
     //work with map
 
-    public double getVal(String name) throws CalculatorException {
+    public double getVal(String name) throws NoDefinitionException {
         try {
             if (variables.get(name) == null)
                 throw new NoDefinitionException(name);
         } catch (NoDefinitionException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new NoDefinitionException("");
         }
         return variables.get(name);
     }
@@ -70,21 +72,20 @@ public class CalculatorContext {
 
     //work with list
 
-    public void putToList(String string) throws CalculatorException{
+    void putToList(String string) throws NoEntryLineException{
         line.clear();
         try {
             if (string == null)
                 throw new NoEntryLineException();
         } catch (NoEntryLineException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new NoEntryLineException();
         }
-        for (String word : string.split(" ")) {
-            line.add(word);
-        }
+        Collections.addAll(line, string.split(" "));
     }
 
-    public String getOperation() throws CalculatorException {
+    public String getOperation() throws NotCommandException, VoidArgsException {
         try {
             if (line.isEmpty()) {
                 throw new VoidArgsException();
@@ -94,24 +95,27 @@ public class CalculatorContext {
             }
         } catch (VoidArgsException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new VoidArgsException();
         } catch (NotCommandException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new NotCommandException("");
         }
         String command = line.get(0);
         line.remove(0);
         return command;
     }
 
-    public String getArg() throws CalculatorException{
+    public String getArg() throws VoidArgsException{
         try {
             if (line.isEmpty()) {
                 throw new VoidArgsException();
             }
         } catch (VoidArgsException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new VoidArgsException();
         }
         String arg = line.get(0);
         line.remove(0);

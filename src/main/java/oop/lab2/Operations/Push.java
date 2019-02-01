@@ -1,6 +1,5 @@
 package oop.lab2.Operations;
 
-
 import oop.lab2.CalculatorContext;
 import oop.lab2.CalculatorExceptions.CalculatorException;
 

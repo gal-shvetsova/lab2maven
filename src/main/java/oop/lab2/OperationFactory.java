@@ -1,20 +1,23 @@
 package oop.lab2;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import oop.lab2.CalculatorExceptions.ArgumentsExceptions.NotCommandException;
-import oop.lab2.CalculatorExceptions.CalculatorException;
 import oop.lab2.Operations.Operation;
 
-import java.io.IOException;
-import java.util.HashMap;
+import org.apache.log4j.Logger;
 
-public final class OperationFactory {
+import java.io.InputStream;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+final class OperationFactory {
     private static HashMap<String, String> mapOperations;
 
     private OperationFactory() {
     }
 
-    private static void addBasic() {
+    private static void fillBasicOperations() {
         mapOperations.put("+", "oop.lab2.Operations.Add");
         mapOperations.put("-", "oop.lab2.Operations.Subtraction");
         mapOperations.put("DEFINE", "oop.lab2.Operations.Define");
@@ -27,31 +30,51 @@ public final class OperationFactory {
         mapOperations.put("SQRT", "oop.lab2.Operations.Sqrt");
     }
 
-    public static int getInstance(String filePath) {
-        if (mapOperations != null)
-            return 0;   //TODO make exception
-        mapOperations = new HashMap();
-        mapOperations.putAll(FactoryLoader.makeMap(filePath));
-        addBasic();
-        return mapOperations.size();
-    }
-
-    public static boolean isOperation(String operation) {
-        return mapOperations.containsKey(operation);
-    }
-
-    public static Operation findOperation(String operation) throws Exception {
+    static Map readOperations(String filePath) {
+        if (filePath == null) {
+            return new HashMap();
+        }
+        Properties properties = new Properties();
+        InputStream in = OperationFactory.class.getClassLoader().getResourceAsStream(filePath);
         try {
-            if (!OperationFactory.isOperation(operation)) {
-                throw new NotCommandException(operation);
+            properties.load(in);
+            in.close();
+        } catch (Exception ex) {
+            Logger log = Logger.getLogger(OperationFactory.class);
+            log.error("No file with operations");
+        }
+        return properties;
+    }
+
+    static void init(String filePath) {
+        if (mapOperations == null || mapOperations.isEmpty()) {
+            mapOperations = new HashMap<>();
+            mapOperations.putAll(readOperations(filePath));
+
+            fillBasicOperations();
+        }
+    }
+
+    static boolean isOperation(String operationKey) {
+        return mapOperations.containsKey(operationKey);
+    }
+
+    static Operation findOperation(String operationKey) throws Exception {
+        try {
+            if (!OperationFactory.isOperation(operationKey)) {
+                throw new NotCommandException(operationKey);
             }
         } catch (NotCommandException ex) {
             System.out.println(ex.what());
-            throw new CalculatorException();
+
+            throw new NotCommandException("");
         }
-        Class opClass = Class.forName(mapOperations.get(operation));
-        Operation op = (Operation) opClass.newInstance();  //TODO exceptions if no such class
-        return op;
+
+        Class opClass = Class.forName(mapOperations.get(operationKey));
+        return (Operation) opClass.newInstance();
     }
 
+    static int getMapOperationsSize() {
+        return mapOperations.size();
+    }
 }
