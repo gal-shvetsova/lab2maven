@@ -63,7 +63,7 @@ public class ContextTest {
     @Test
     public void testGetOperation() throws CalculatorException {
         context.putToList("+ 5 2 3 1");
-        OperationFactory.init(null);
+        OperationFactory.init("operation.properties");
         Assert.assertEquals("+", context.getOperation());
     }
 

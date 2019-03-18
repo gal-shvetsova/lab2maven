@@ -1,7 +1,16 @@
 package oop.lab2.CalculatorExceptions;
 
 public class CalculatorException extends Exception {
-    public String what() {
-        return "Impossible to calculate";
+    private String message;
+
+    @Override
+    public String getMessage() {
+        return message;
     }
+
+    public CalculatorException(String message) {
+        super(message);
+        this.message = message;
+    }
+
 }

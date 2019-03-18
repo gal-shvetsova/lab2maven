@@ -21,7 +21,7 @@ public class FactoryLoaderTest {
 
     @Test
     public void testLoader(){
-        Map map = OperationFactory.readOperations("test.properties");
-        Assert.assertEquals(1, map.size());
+        int size = OperationFactory.init("operation.properties").getMapOperationsSize();
+        Assert.assertEquals(9, size);
     }
 }

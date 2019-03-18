@@ -1,65 +1,29 @@
-2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Define
-2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for DEFINE a 4
-2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Push
-2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for PUSH a
-2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Sqrt
-2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for SQRT
-2019-01-31 17:29:26 INFO  Calculator:21 - Make class oop.lab2.Operations.Print
-2019-01-31 17:29:26 INFO  Calculator:27 - Successfully make calculation for PRINT
-2019-01-31 17:31:06 INFO  Calculator:21 - Make DEFINE
-2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for DEFINE a 4
-2019-01-31 17:31:06 INFO  Calculator:21 - Make PUSH
-2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for PUSH a
-2019-01-31 17:31:06 INFO  Calculator:21 - Make SQRT
-2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for SQRT
-2019-01-31 17:31:06 INFO  Calculator:21 - Make PRINT
-2019-01-31 17:31:06 INFO  Calculator:27 - Successfully make calculation for PRINT
-2019-02-01 09:15:38 INFO  Calculator:20 - Make DEFINE
-2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
-2019-02-01 09:15:38 INFO  Calculator:20 - Make PUSH
-2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for PUSH a
-2019-02-01 09:15:38 INFO  Calculator:20 - Make SQRT
-2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for SQRT
-2019-02-01 09:15:38 INFO  Calculator:20 - Make PRINT
-2019-02-01 09:15:38 INFO  Calculator:26 - Successfully make calculation for PRINT
-2019-02-01 09:40:21 ERROR Calculator:22 - Catching exception in calculator.  is not a command in DEFINE a 4
-2019-02-01 09:41:20 INFO  Calculator:20 - Make DEFINE
-2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
-2019-02-01 09:41:20 INFO  Calculator:20 - Make PUSH
-2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for PUSH a
-2019-02-01 09:41:20 INFO  Calculator:20 - Make SQRT
-2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for SQRT
-2019-02-01 09:41:20 INFO  Calculator:20 - Make PRINT
-2019-02-01 09:41:20 INFO  Calculator:26 - Successfully make calculation for PRINT
-2019-02-01 09:42:19 ERROR OperationFactory:43 - No file with operations
-2019-02-01 09:42:19 INFO  Calculator:20 - Make DEFINE
-2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
-2019-02-01 09:42:19 INFO  Calculator:20 - Make PUSH
-2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for PUSH a
-2019-02-01 09:42:19 INFO  Calculator:20 - Make SQRT
-2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for SQRT
-2019-02-01 09:42:19 INFO  Calculator:20 - Make PRINT
-2019-02-01 09:42:19 INFO  Calculator:26 - Successfully make calculation for PRINT
-2019-02-01 09:42:41 INFO  Calculator:20 - Make DEFINE
-2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
-2019-02-01 09:42:41 INFO  Calculator:20 - Make PUSH
-2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for PUSH a
-2019-02-01 09:42:41 INFO  Calculator:20 - Make SQRT
-2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for SQRT
-2019-02-01 09:42:41 INFO  Calculator:20 - Make PRINT
-2019-02-01 09:42:41 INFO  Calculator:26 - Successfully make calculation for PRINT
-2019-02-01 09:43:09 INFO  Calculator:20 - Make DEFINE
-2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
-2019-02-01 09:43:09 INFO  Calculator:20 - Make PUSH
-2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for PUSH a
-2019-02-01 09:43:09 INFO  Calculator:20 - Make SQRT
-2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for SQRT
-2019-02-01 09:43:09 INFO  Calculator:20 - Make PRINT
-2019-02-01 09:43:09 INFO  Calculator:26 - Successfully make calculation for PRINT
-2019-02-01 09:43:23 INFO  Calculator:20 - Make DEFINE
-2019-02-01 09:43:23 INFO  Calculator:26 - Successfully make calculation for DEFINE a 4
-2019-02-01 09:43:23 INFO  Calculator:20 - Make PUSH
-2019-02-01 09:43:23 INFO  Calculator:26 - Successfully make calculation for PUSH a
-2019-02-01 09:43:23 INFO  Calculator:20 - Make SQRT
-2019-02-01 09:43:23 INFO  Calculator:26 - Successfully make calculation for SQRT
-2019-02-01 09:43:23 ERROR Calculator:22 - Catching exception in calculator.  is not a command in PRIfffNT
+2019-03-18 17:55:41 INFO  Calculator:22 - Make DEFINE
+2019-03-18 17:55:41 INFO  Calculator:28 - Successfully make calculation for DEFINE a 2
+2019-03-18 17:55:45 INFO  Calculator:22 - Make PUSH
+2019-03-18 17:55:45 INFO  Calculator:28 - Successfully make calculation for PUSH 5
+2019-03-18 17:55:49 ERROR Calculator:24 - Catching exception in calculator. No operands in +
+2019-03-18 17:56:53 INFO  Calculator:22 - Make DEFINE
+2019-03-18 17:56:53 INFO  Calculator:28 - Successfully make calculation for DEFINE A 2
+2019-03-18 17:56:55 INFO  Calculator:22 - Make PUSH
+2019-03-18 17:56:55 INFO  Calculator:28 - Successfully make calculation for PUSH A
+2019-03-18 17:56:58 INFO  Calculator:22 - Make PUSH
+2019-03-18 17:56:58 INFO  Calculator:28 - Successfully make calculation for PUSH 5
+2019-03-18 17:57:06 INFO  Calculator:22 - Make +
+2019-03-18 17:57:06 INFO  Calculator:28 - Successfully make calculation for +
+2019-03-18 17:57:08 INFO  Calculator:22 - Make PRINT
+2019-03-18 17:57:08 INFO  Calculator:28 - Successfully make calculation for PRINT
+2019-03-18 18:23:03 INFO  Calculator:22 - Make DEFINE
+2019-03-18 18:23:03 INFO  Calculator:28 - Successfully make calculation for DEFINE A 2
+2019-03-18 18:23:05 ERROR Calculator:24 - Catching exception in calculator. oop.lab2.CalculatorExceptions.ArgumentsExceptions.VoidStackException: No operands in +
+2019-03-18 19:25:20 INFO  Calculator:22 - Make DEFINE
+2019-03-18 19:25:20 INFO  Calculator:28 - Successfully make calculation for DEFINE A 2
+2019-03-18 19:25:24 INFO  Calculator:22 - Make PUSH
+2019-03-18 19:25:24 INFO  Calculator:28 - Successfully make calculation for PUSH A
+2019-03-18 19:25:26 ERROR Calculator:24 - Catching exception in calculator. oop.lab2.CalculatorExceptions.ArgumentsExceptions.VoidStackException: No operands in +
+2019-03-18 19:27:07 INFO  Calculator:22 - Make PUSH
+2019-03-18 19:27:07 INFO  Calculator:28 - Successfully make calculation for PUSH 2
+2019-03-18 19:27:10 ERROR Calculator:24 - Catching exception in calculator. oop.lab2.CalculatorExceptions.ArgumentsExceptions.VoidStackException: No operands in +
+2019-03-18 19:28:04 INFO  Calculator:22 - Make PUSH
+2019-03-18 19:28:04 INFO  Calculator:27 - Successfully make calculation for PUSH 2
+2019-03-18 19:28:06 ERROR Calculator:24 - Catching exception in calculator. oop.lab2.CalculatorExceptions.ArgumentsExceptions.VoidStackException: No operands in +

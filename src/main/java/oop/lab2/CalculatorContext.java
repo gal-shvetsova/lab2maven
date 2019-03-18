@@ -25,7 +25,7 @@ public class CalculatorContext {
             if (argStack.empty())
                 throw new VoidStackException();
         } catch (VoidStackException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex.getMessage());
 
             throw new VoidStackException();
         }
@@ -37,7 +37,7 @@ public class CalculatorContext {
             if (argStack.empty())
                 throw new VoidStackException();
         } catch (VoidStackException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex.getMessage());
 
             throw new VoidStackException();
         }
@@ -59,7 +59,7 @@ public class CalculatorContext {
             if (variables.get(name) == null)
                 throw new NoDefinitionException(name);
         } catch (NoDefinitionException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex.getMessage());
 
             throw new NoDefinitionException("");
         }
@@ -78,7 +78,7 @@ public class CalculatorContext {
             if (string == null)
                 throw new NoEntryLineException();
         } catch (NoEntryLineException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex.getMessage());
 
             throw new NoEntryLineException();
         }
@@ -94,11 +94,11 @@ public class CalculatorContext {
                 throw new NotCommandException(line.get(0));
             }
         } catch (VoidArgsException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex.getMessage());
 
             throw new VoidArgsException();
         } catch (NotCommandException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex.getMessage());
 
             throw new NotCommandException("");
         }
@@ -113,7 +113,7 @@ public class CalculatorContext {
                 throw new VoidArgsException();
             }
         } catch (VoidArgsException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex.getMessage());
 
             throw new VoidArgsException();
         }

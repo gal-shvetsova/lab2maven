@@ -8,34 +8,34 @@ import oop.lab2.Operations.Add;
 
 public class FactoryTest {
 
-    @BeforeClass
-    public static void init() {
-        OperationFactory.init(null);
-    }
-
     @Test
     public void testGetInstance() {
-        Assert.assertEquals(10, OperationFactory.getMapOperationsSize());
+        OperationFactory factory = OperationFactory.init("operation.properties");
+        Assert.assertEquals(9, factory.getMapOperationsSize());
     }
 
     @Test
     public void testIsOperation() {
-        Assert.assertTrue(OperationFactory.isOperation("+"));
+        OperationFactory factory = OperationFactory.init("operation.properties");
+        Assert.assertTrue(factory.isOperation("+"));
     }
 
     @Test
     public void testIsNotOperation() {
-        Assert.assertFalse(OperationFactory.isOperation("="));
+        OperationFactory factory = OperationFactory.init("operation.properties");
+        Assert.assertFalse(factory.isOperation("="));
     }
 
     @Test
     public void testFindOperation() throws Exception {
-        Assert.assertSame(Add.class, OperationFactory.findOperation("+").getClass());
+        OperationFactory factory = OperationFactory.init("operation.properties");
+        Assert.assertSame(Add.class, factory.findOperation("+").getClass());
     }
 
     @Test(expected = NotCommandException.class)
     public void testFindNoOperation() throws Exception {
-            OperationFactory.findOperation("=").getClass();
+        OperationFactory factory = OperationFactory.init("operation.properties");
+        factory.findOperation("=").getClass();
     }
 
 

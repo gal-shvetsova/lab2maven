@@ -11,23 +11,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-final class OperationFactory {
-    private static HashMap<String, String> mapOperations;
+public final class OperationFactory {
+    private HashMap<String, String> mapOperations;
+
+    private static OperationFactory instance = new OperationFactory();
 
     private OperationFactory() {
-    }
-
-    private static void fillBasicOperations() {
-        mapOperations.put("+", "oop.lab2.Operations.Add");
-        mapOperations.put("-", "oop.lab2.Operations.Subtraction");
-        mapOperations.put("DEFINE", "oop.lab2.Operations.Define");
-        mapOperations.put("/", "oop.lab2.Operations.Division");
-        mapOperations.put("*", "oop.lab2.Operations.Multiplication");
-        mapOperations.put("POP", "oop.lab2.Operations.Pop");
-        mapOperations.put("PUSH", "oop.lab2.Operations.Push");
-        mapOperations.put("PRINT", "oop.lab2.Operations.Print");
-        mapOperations.put("#", "oop.lab2.Operations.DoingNothing");
-        mapOperations.put("SQRT", "oop.lab2.Operations.Sqrt");
     }
 
     static Map readOperations(String filePath) {
@@ -46,26 +35,26 @@ final class OperationFactory {
         return properties;
     }
 
-    static void init(String filePath) {
-        if (mapOperations == null || mapOperations.isEmpty()) {
-            mapOperations = new HashMap<>();
-            mapOperations.putAll(readOperations(filePath));
-
-            fillBasicOperations();
+    public static OperationFactory init(String filePath) {
+        if (instance.mapOperations == null){
+            instance.mapOperations = new HashMap<>();
+            instance.mapOperations.putAll(readOperations(filePath));
+            return instance;
         }
+        return instance;
     }
 
     static boolean isOperation(String operationKey) {
-        return mapOperations.containsKey(operationKey);
+        return instance.mapOperations.containsKey(operationKey);
     }
 
-    static Operation findOperation(String operationKey) throws Exception {
+    public Operation findOperation(String operationKey) throws Exception {
         try {
             if (!OperationFactory.isOperation(operationKey)) {
                 throw new NotCommandException(operationKey);
             }
         } catch (NotCommandException ex) {
-            System.out.println(ex.what());
+            System.out.println(ex);
 
             throw new NotCommandException("");
         }
@@ -74,7 +63,7 @@ final class OperationFactory {
         return (Operation) opClass.newInstance();
     }
 
-    static int getMapOperationsSize() {
-        return mapOperations.size();
+    public static int getMapOperationsSize() {
+        return instance.mapOperations.size();
     }
 }
